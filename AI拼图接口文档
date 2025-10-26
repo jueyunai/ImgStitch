@@ -1,0 +1,58 @@
+1、请求：
+curl --location --request POST 'https://collage-service-177821-9-1328689937.sh.run.tcloudbase.com/api/upload/generate-from-urls' \
+--header 'User-Agent: Apifox/1.0.0 (https://apifox.com)' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "imageUrls": [
+    "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?w=800",
+    "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800",
+    "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800"
+  ],
+  "aspectRatio": "3:4",
+  "title": "拼图标题 123 LALAL"
+}'
+
+
+2、返回：
+{
+    "code": 0,
+    "message": "拼图生成成功，共生成 6 张",
+    "data": {
+        "results": [
+            {
+                "templateId": "3-1",
+                "templateName": "L型布局",
+                "downloadURL": "https://636c-cloud1-9g9prblyc2ea8ed0-1328689937.tcb.qcloud.la/collages/1761473163213_3-1_3:4.jpg"
+            },
+            {
+                "templateId": "3-2",
+                "templateName": "横向三栏",
+                "downloadURL": "https://636c-cloud1-9g9prblyc2ea8ed0-1328689937.tcb.qcloud.la/collages/1761473164371_3-2_3:4.jpg"
+            },
+            {
+                "templateId": "3-3",
+                "templateName": "纵向三栏",
+                "downloadURL": "https://636c-cloud1-9g9prblyc2ea8ed0-1328689937.tcb.qcloud.la/collages/1761473165466_3-3_3:4.jpg"
+            },
+            {
+                "templateId": "3-4",
+                "templateName": "上一下二",
+                "downloadURL": "https://636c-cloud1-9g9prblyc2ea8ed0-1328689937.tcb.qcloud.la/collages/1761473166523_3-4_3:4.jpg"
+            },
+            {
+                "templateId": "3-5",
+                "templateName": "左一右二",
+                "downloadURL": "https://636c-cloud1-9g9prblyc2ea8ed0-1328689937.tcb.qcloud.la/collages/1761473167539_3-5_3:4.jpg"
+            },
+            {
+                "templateId": "3-6",
+                "templateName": "右一左二",
+                "downloadURL": "https://636c-cloud1-9g9prblyc2ea8ed0-1328689937.tcb.qcloud.la/collages/1761473168599_3-6_3:4.jpg"
+            }
+        ],
+        "photoCount": 3,
+        "aspectRatio": "3:4",
+        "size": "2000x2667",
+        "generatedCount": 6
+    }
+}
