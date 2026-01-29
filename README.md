@@ -58,7 +58,7 @@ npm run pack
 ## 技术实现
 
 - 使用 `@lark-opdev/block-basekit-server-api` 框架
-- 调用AI拼图接口：`https://collage-service-177821-9-1328689937.sh.run.tcloudbase.com/api/upload/generate-from-urls`
+- 调用AI拼图接口
 - 支持多种图片尺寸比例
 - 自动处理图片下载和附件生成
 - 完善的错误处理和日志记录
